@@ -1,0 +1,167 @@
+  <div className={type === "list" ? "headerItem listMode" : "headerItem"}>
+          <div className='headerlinkActive'>
+            <IoBedOutline style={{ fontSize: "20px", marginLeft: " 3px" }} />
+            <span>Stays</span>
+          </div>
+          <div className='headerlink'>
+            <TbPlane style={{ fontSize: "20px", marginLeft: " 3px" }} />
+            <span>Flights</span>
+          </div>
+          <div className='headerlink'>
+            <IoCarSportOutline style={{ fontSize: "20px", marginLeft: " 3px" }} />
+            <span>Car rentals</span>
+          </div>
+          <div className='headerlink'>
+            <MdOutlineAttractions style={{ fontSize: "20px", marginLeft: " 3px" }} />
+            <span>Attraction</span>
+          </div>
+          <div className='headerlink'>
+            <FaShuttleVan style={{ fontSize: "20px", marginLeft: " 3px" }} />
+            <span>Airport taxis</span>
+          </div>
+
+
+        </div>
+
+
+
+        apikey : AIzaSyDAZrM87cEmFny-q5wApY3M8uRNYGjSxwU
+
+
+
+
+        "use client";
+import React from 'react'
+import { useState } from "react";
+import {
+  APIProvider,
+  AdvancedMarker,
+  Pin,
+  InfoWindow,
+  Map,
+} from "@vis.gl/react-google-maps";
+
+
+   
+
+const MyMap = () => {
+    const position = { lat: 53.54, lng: 10 };
+    const [open, setOpen] = useState(false);
+
+  return (
+    <div>
+      <APIProvider apiKey="AIzaSyDAZrM87cEmFny-q5wApY3M8uRNYGjSxwU">
+        <div style={{ height: "100vh", width: "100%" }}>
+          <Map zoom={9} center={position} mapId={process.env.NEXT_PUBLIC_MAP_ID}>
+            <AdvancedMarker position={position} onClick={() => setOpen(true)}>
+              <Pin
+                background={"grey"}
+                borderColor={"green"}
+                glyphColor={"purple"}
+              />
+            </AdvancedMarker>
+
+            {open && (
+              <InfoWindow position={position} onCloseClick={() => setOpen(false)}>
+                <p>I'm in Hamburg</p>
+              </InfoWindow>
+            )}
+          </Map>
+        </div>
+      </APIProvider>
+    </div>
+  )
+}
+
+export default MyMap
+
+
+
+
+
+
+
+
+
+
+import React, { useEffect } from 'react'
+import "./style.css"
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { useState } from 'react';
+import axios from 'axios';
+
+const Search = () => {
+  const [hotels , setHotels] = useState([])
+  useEffect(()=>{
+    axios.get("Js/data.json")
+    .then((res)=>{
+       setHotels(res.data.hotels)
+    })
+
+  },[])
+  const hotelList = hotels.map((hotel)=>{
+ return(
+  <div className="hotelSearch">
+   <div className="hotelImg">
+    <img sr c= {hotel.photo}
+    alt='Sample'/>
+   </div>
+   <div className="hotelDetail">
+    <h4>{hotel.name}</h4>
+    <p>{hotel.country}</p>
+    <p>{hotel.rating}</p>
+    <p>{hotel.description}</p>
+   </div>
+  </div>
+
+ )
+})
+return (
+  <div>{hotelList}</div>
+)}
+export default Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className="headerr">
+<Container>
+<Row>
+<div className= "headerrItem">
+
+ <Link to="/" className='headerrlinkActive'>
+    <IoBedOutline style={{ fontSize: "20px", marginLeft: " 3px" }} />
+    <span>{t('first1')}</span>
+ </Link>
+  <Link to="Flight"className='headerrlink'>
+    <TbPlane style={{ fontSize: "20px", marginLeft: " 3px" }} />
+    <span>{t('first2')}</span>
+ </Link>
+  <Link to="Car" className='headerrlink'>
+    <IoCarSportOutline style={{ fontSize: "20px", marginLeft: " 3px" }} />
+    <span>{t('first3')}</span>
+ </Link>
+ <Link to="Attraction"className='headerrlink'>
+    <MdOutlineAttractions style={{ fontSize: "20px", marginLeft: " 3px" }} />
+    <span>{t('first4')}</span>
+  </Link>
+  <Link to="Taxi"  className='headerrlink'>
+    <FaShuttleVan style={{ fontSize: "20px", marginLeft: " 3px" }} />
+    <span>{t('first5')}</span>
+ </Link>
+</div>

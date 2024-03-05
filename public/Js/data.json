@@ -1,0 +1,82 @@
+{
+    
+ "hotels" :  [
+    {
+      "name": "Dune",
+      "country": "Paris",
+      "rating": "4.2",
+      "writenRating":"Very good",
+      "photo": "/imgBooking/492735102.webp",
+      "description": "A science fiction novel by American author Frank Herbert."
+    },
+    {
+      "name": "Ender's Game",
+      "country": "Dubai",
+      "rating": "4.3",
+      "writenRating":"Very good",
+      "photo": "/imgBooking/hotca.webp",
+      "description": "A military science fiction novel by American author Orson Scott Card."
+    },
+    {
+      "name": "Foundation",
+      "country": "Dubai",
+      "rating": "4.1",
+      "writenRating":" Good",
+      "photo": "/imgBooking/dubai.webp",
+      "description": "The first book in the Foundation Trilogy by American writer Isaac Asimov."
+    },
+    {
+      "name": "1984",
+      "country": "Dubai",
+      "rating": "4.5",
+      "writenRating":"Very good",
+      "photo": "/imgBooking/dubai2.webp",
+      "description": "A dystopian novel by English author George Orwell."
+    },
+    {
+      "name": "Brave New World",
+      "country": "Cairo",
+      "rating": "4.0",
+      "writenRating":"Good",
+      "photo": "/imgBooking/cairo.webp",
+      "description": "A dystopian novel by English author Aldous Huxley."
+    },
+    {
+      "name": "The Hitchhiker's Guide to the Galaxy",
+      "country": "Cairo",
+      "rating": "4.4",
+      "writenRating":"Very good",
+      "photo": "/imgBooking/cairo2.webp",
+      "description": "A comedic science fiction series by English author Douglas Adams."
+    },
+    {
+      "name": "Neuromancer",
+      "country": "Canada",
+      "rating": "4.2",
+      "writenRating":"Good",
+      "photo": "/imgBooking/dahab.webp",
+      "description": "A science fiction novel by American-Canadian writer William Gibson."
+    },
+    {
+      "name": "Snow Crash",
+      "country": "United States",
+      "rating": "4.1",
+      "writenRating":"Good",
+      "photo": "/imgBooking/dubai.webp",
+      "description": "A science fiction novel by American writer Neal Stephenson."
+    },
+    {
+      "name": "The Martian",
+      "country": "Luxor",
+      "rating": "4.6",
+      "photo": "/imgBooking/hotcar.webp",
+      "description": "A science fiction novel by American author Andy Weir."
+    },
+    {
+      "name": "Ready Player One",
+      "country": "Alx",
+      "rating": "4.3",
+      "photo": "/imgBooking/alx.webp",
+      "description": "A science fiction novel by American author Ernest Cline."
+    }
+  ]}

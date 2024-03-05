@@ -140,12 +140,12 @@ const Taxi = () => {
               <BsPerson style={{ fontSize: "20px", marginLeft: " 3px", cursor: "pointer" }} /></Col>
               <Col md={2} sm={12} className='headerSearchItem' style={{ borderRadius: "0px 10px 10px 0px", cursor: "pointer" }}>
               
-              <Link to={"/Listsearch"}>
+              
               
               <Button
                 
                 className='headerBtn'
-              > Search</Button></Link>
+              > Search</Button>
             </Col>
         </Row>
         <Row style={{marginTop:"70px"}}>

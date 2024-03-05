@@ -77,7 +77,7 @@ const Attraction = () => {
           </Row>
           </Container></div></div>
           
-          <Container className='destinationA'>
+          <Container  className='destinationA'>
         <Row>
           <div className="destinationTitle">
             <h2 className='recentTitle'>
@@ -151,7 +151,7 @@ const Attraction = () => {
 
     </Container>
    
-    <Container style={{padding:"10px",marginTop:"20px"}}>
+    <Container style={{marginTop:"20px"}}>
       <Row>
       <hr />
         <h4 style={{fontSize:"20px",fontWeight:"bold",marginTop:"20px"}}>We've got you covered</h4>
